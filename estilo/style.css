@@ -29,18 +29,18 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: var(--teal);
+    background: #2e6e74c8;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 48px;
-    height: 72px;
+    height: 100px;
     box-shadow: 0 2px 16px rgba(0,0,0,0.15);
   }
 
   .logo-box {
   width: 200px;
-  height: 150px;
+  height: 200px;
   display: flex;
   align-items: center;
 }
@@ -154,7 +154,7 @@
 
   #servicos h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 52px;
+    font-size: 100px;
     font-weight: 400;
     color: var(--teal);
     letter-spacing: -1px;
@@ -218,7 +218,7 @@
 
   #duvidas h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    font-size: 80px;
     font-weight: 400;
     color: var(--teal);
     line-height: 1.2;
@@ -275,8 +275,8 @@
   }
 
   .contato-icon {
-    width: 72px;
-    height: 72px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background: var(--teal-light);
     display: flex;
@@ -288,7 +288,10 @@
     background: var(--teal);
     transform: translateY(-4px);
   }
-  .contato-item:hover .contato-icon svg { color: #fff; }
+  
+  .contato-item:hover .contato-icon svg { 
+    color: #fff; 
+  }
 
   .contato-icon svg {
     width: 30px;
@@ -298,7 +301,7 @@
   }
 
   .contato-label {
-    font-size: 15px;
+    font-size: 25px;
     font-style: italic;
     color: var(--teal-dark);
     font-weight: 500;
