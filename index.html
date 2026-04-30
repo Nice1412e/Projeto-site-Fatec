@@ -69,21 +69,48 @@
 <!-- DÚVIDAS -->
 <section id="duvidas">
   <div class="duvidas-inner">
-    <h2>Principais Dúvidas</h2>
+    <h2>Dúvidas mais comuns.</h2>
     <div class="faq-list">
-      <textarea class="faq-item" placeholder="Dúvida 1 — clique para editar"></textarea>
-      <textarea class="faq-item" placeholder="Dúvida 2 — clique para editar"></textarea>
-      <textarea class="faq-item" placeholder="Dúvida 3 — clique para editar"></textarea>
-      <textarea class="faq-item" placeholder="Dúvida 4 — clique para editar"></textarea>
+
+      <div class="faq-bloco">
+        <button type="button" class="faq-btn" onclick="abrirFaq(this)">Qual a duração e frequência das sessões?</button>
+        <div class="faq-resposta">
+          <p>As sessões têm duração de cerca de 50 minutos em média, com frequência semanal em dias e horários fixos. Pode haver alteração de dia e horário mas deve ser previamente negociado para verificar disponibilidade</p>
+        </div>
+      </div>
+
+      <div class="faq-bloco">
+        <button type="button" class="faq-btn" onclick="abrirFaq(this)">Eu atendo presencial ou online? Como funciona?</button>
+        <div class="faq-resposta">
+          <p>Sim, oferto os dois tipos de atendimento - Presencial e Online <br>
+              Entre em contato para informações sobre localização do consultório para sessões presenciais <br>
+              Nos atendimentos online, é gerado um link em serviço de videoconferência, geralmente no Google Meet - que é acessível nos celulares e computadores; </p>
+        </div>
+      </div>
+
+      <div class="faq-bloco">
+        <button type="button" class="faq-btn" onclick="abrirFaq(this)">E o sigilo?</button>
+        <div class="faq-resposta">
+          <p>É expressamente garantido o sigilo de quaisquer informações e conteúdos tratados nas sessões (conforme Art. nº 4, Resolução Nº 1, CFP).</p>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" class="faq-btn" onclick="abrirFaq(this)">Quais os hórarios eu atendo?</button>
+        <div class="faq-resposta">
+          <p>Eu atendo apenas em horários alternativos, sendo: <br>
+            → Segunda à sexta feira à partir das 18h. <br>
+            → Sábados: a partir das 9h.</p>
+        </div>
+      </div>
     </div>
-  </div>
 </section>
 
 <!-- CONTATO -->
 <section id="contato">
   <div class="contato-grid">
 
-    <a href="https://wa.me/SEU_NUMERO" class="contato-item">
+    <a href="https://wa.me/SEU_NUMERO" target="_blank" class="contato-item">
       <div class="contato-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
@@ -146,6 +173,22 @@
   }, { threshold: 0.4 });
 
   sections.forEach(s => observer.observe(s));
+
+
+  // ── Accordion das dúvidas ──
+  function abrirFaq(botao) {
+    // Pega a div de resposta que vem logo depois do botão
+    var resposta = botao.nextElementSibling;
+ 
+    // Se estiver escondida, mostra; se estiver visível, esconde
+    if (resposta.style.display === 'block') {
+      resposta.style.display = 'none';
+      botao.textContent = botao.textContent.replace('^', 'v');
+    } else {
+      resposta.style.display = 'block';
+      botao.textContent = botao.textContent.replace('▼', '▲');
+    }
+  }
 </script>
 
 </body>
